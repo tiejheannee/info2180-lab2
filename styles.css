@@ -1,0 +1,114 @@
+.header-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.profile-pic{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.date-author{
+    color:  #718096;
+    margin-bottom: 1px;
+}
+
+.blog-pic1{
+    float: right;
+    width: 150px;
+    height: 150px;
+    margin: -10px 15px 10px 0;
+    border-radius: 15px;
+}
+
+.blog-pic2{
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 10px 15px 10px 0;
+}
+
+body{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+
+    color: #2D3748;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "main sidebar"
+    "footer footer";
+  grid-template-columns: 1fr 250x; /* sidebar fixed width, main flexible */
+  grid-template-rows: auto 1fr auto; /* header, content, footer */
+  min-height: 100vh; /* full height screen */
+}
+
+/* Assign each section to a grid area */
+header {
+  grid-area: header;
+  background:  #63B3ED;
+  padding: 20px;
+  text-align: center;
+  font-size: 36px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #ffffff;
+  /**border-bottom: #ccd5ae 4px solid;*/
+}
+aside {
+  grid-area: sidebar;
+  background: #ffffff;
+  padding: 15px;
+}
+
+/* Social Media and Archives headings */
+aside section.Socials h3, aside section.Archives h3{
+    color: #48BB78; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+
+aside section.About {
+    background-color: #E2E8F0;  /* light gray background */
+    padding: 10px;               /* adds space inside so text doesn’t touch edges */
+    font-size: #000000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+/* Make the links blue */
+aside section.Socials ul li a, aside section.Archives ul li a{
+    color: #4299E1;      /* blue text */
+    text-decoration: none; /* optional: removes underline */
+}
+
+main {
+  grid-area: main;
+  background: #ffffff;
+  padding: 20px;
+}
+
+footer {
+  grid-area: footer;
+  color:   #ffffff;
+  background-color: #2C5282;
+  padding: 10px;
+  text-align: center;
+}
+
+article h2 {
+    font-size: 32px;      
+    color: #48BB78;       
+    margin-bottom: 10px; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
